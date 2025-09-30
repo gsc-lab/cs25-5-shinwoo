@@ -4,9 +4,9 @@ include 'db.php';
 
 // 2. 사용자로부터 입력값 받기
 // 이름, 학번, 비밀번호
-$student_num = trim($_POST['student_num']);
-$name = trim($_POST['name']);
-$password = trim($_POST['password']);
+$student_num = ($_POST['student_num']);
+$name = ($_POST['name']);
+$password = ($_POST['password']);
 // 3. 예외처리
 // 3개의 입력값을 전부 입력 받았는지 확인. (하나라도 안받았으면 오류메시지 출력)
 if ($student_num === '' || $name === '' || $password === '') {

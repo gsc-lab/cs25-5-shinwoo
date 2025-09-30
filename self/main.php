@@ -1,5 +1,4 @@
 <?php
-// main.php
 session_start();
 include 'db.php';
 
@@ -38,8 +37,8 @@ $result = $db_conn->query($sql);
     <?php while($row = $result->fetch_assoc()): ?>
         <tr>
             <td><?= $row['id'] ?></td>
-            <td><a href="view.php?id=<?= $row['id'] ?>"><?= htmlspecialchars($row['title']) ?></a></td>
-            <td><?= htmlspecialchars($row['name']) ?></td>
+            <td><a href="view.php?id=<?= $row['id'] ?>"><?= $row['title'] ?></a></td>
+            <td><?= $row['name'] ?></td>
             <td><?= $row['created_at'] ?></td>
         </tr>
     <?php endwhile; ?>

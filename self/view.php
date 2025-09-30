@@ -1,5 +1,4 @@
 <?php
-// view.php
 session_start();
 include 'db.php';
 
@@ -25,18 +24,18 @@ $post = $result->fetch_assoc();
     <head>
         <meta charset="UTF-8">
         <title>
-            <?= htmlspecialchars($post['title']) ?>
+            <?= $post['title'] ?>
         </title>
     </head>
     <body>
         <h2>
-            <?= htmlspecialchars($post['title']) ?>
+            <?= $post['title'] ?>
         </h2>
-            <p>작성자: <?= htmlspecialchars($post['name']) ?> (<?= htmlspecialchars($post['student_num']) ?>)</p>
+            <p>작성자: <?= ($post['name']) ?> (<?= $post['student_num'] ?>)</p>
             <p>작성일: <?= $post['created_at'] ?></p>
             <hr>
                 <div>
-                    <?= nl2br(htmlspecialchars($post['content'])) ?>
+                    <?= ($post['content']) ?>
                 </div>
             <hr>
 
