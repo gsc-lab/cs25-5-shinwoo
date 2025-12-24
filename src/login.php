@@ -8,7 +8,8 @@ if ($_POST) {
     $sql = "SELECT * FROM users WHERE user_id='$id'";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
-
+    var_dump($row);
+    
     if ($row && password_verify($pw, $row['user_pw'])) {
         $_SESSION['user_id'] = $id;
         echo "<script>location.href='main.php'</script>";

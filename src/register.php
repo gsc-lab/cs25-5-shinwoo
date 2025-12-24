@@ -10,7 +10,7 @@
 
 <?php
 if ($_POST) {
-    $id = $_POST['user'];
+    $id = $_POST['user_id'];
     $pw = password_hash($_POST['user_pw'], PASSWORD_DEFAULT);
 
     $check = mysqli_query($conn, "SELECT * FROM users WHERE user_id='$id'");
