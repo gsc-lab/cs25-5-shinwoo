@@ -16,5 +16,5 @@
 <?php if (isset($_SESSION['user_id'])) { ?>
     <button onclick="location.href='write.php'">게시글 작성</button>
 <?php } else { ?>
-    <p>로그인 후 이용해주세요</p>
+    <p>게시글 작성은 로그인 후 이용해주세요</p>
 <?php } ?>

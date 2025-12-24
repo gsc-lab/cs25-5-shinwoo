@@ -1,1 +1,13 @@
-<?php // 게시판 삭제 구현
+<?php
+include 'db.php';
+
+$id = $_GET['id'];
+
+$sql = "SELECT user_id FROM posts WHERE id = $id";
+$result = mysqli_query($conn, $sql);
+$post = mysqli_fetch_assoc($result);
+
+$del_sql = "DELETE FROM posts WHERE id = $id";
+mysqli_query($conn, $del_sql);
+
+echo "<script>location.href='view.php'</script>";

@@ -21,4 +21,7 @@ if ($_POST) {
         echo "<script>alert('가입 완료'); location.href='login.php'</script>";
     }
 }
+
+// 빈칸으로 가입시도 할 때 처리 추가. (현재 빈칸으로 회원가입해도 성공하는걸 발견)
+
 ?>
