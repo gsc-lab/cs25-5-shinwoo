@@ -11,6 +11,10 @@
 <?php
 if ($_POST) {
     $id = $_POST['user_id'];
+    if (empty($_POST['user_id']) || empty($_POST['user_pw'])) {
+    echo "아이디와 비밀번호를 모두 입력해주세요.";
+    exit;
+    }   
     $pw = password_hash($_POST['user_pw'], PASSWORD_DEFAULT);
 
     $check = mysqli_query($conn, "SELECT * FROM users WHERE user_id='$id'");
@@ -21,7 +25,5 @@ if ($_POST) {
         echo "<script>alert('가입 완료'); location.href='login.php'</script>";
     }
 }
-
-// 빈칸으로 가입시도 할 때 처리 추가. (현재 빈칸으로 회원가입해도 성공하는걸 발견)
 
 ?>
