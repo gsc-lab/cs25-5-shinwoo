@@ -10,4 +10,4 @@ $post = mysqli_fetch_assoc($result);
 $del_sql = "DELETE FROM posts WHERE id = $id";
 mysqli_query($conn, $del_sql);
 
-echo "<script>location.href='view.php'</script>";
+echo "<script>alert('삭제 완료');location.href='view.php'</script>";

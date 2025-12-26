@@ -12,7 +12,7 @@ if ($_POST) {
     $update_sql = "UPDATE posts SET title = '$title', content = '$content' WHERE id = $id";
     
     mysqli_query($conn, $update_sql);
-    echo "<script> location.href='post.php?id=$id'; </script>";
+    echo "<script>alert('수정 완료'); location.href='post.php?id=$id'; </script>";
     exit;
 }
 ?>

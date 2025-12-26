@@ -11,7 +11,7 @@ if ($_POST) {
 
     if ($row && password_verify($pw, $row['user_pw'])) {
         $_SESSION['user_id'] = $id;
-        echo "<script>location.href='main.php'</script>";
+        echo "<script>alert('로그인 성공');location.href='main.php'</script>";
     } else {
         echo "아이디 또는 비밀번호 오류";
     }
